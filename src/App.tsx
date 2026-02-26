@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
+import DeletarCategoria from './Components/categoria/deletarcategoria/DeletarCategoria'
 import FormCategoria from './Components/categoria/fromcategoria/FromCategori'
 import ListaCategoria from './Components/categoria/listacategoria/ListaCategoria'
 import Footer from './Components/footer/footer'
@@ -19,6 +20,7 @@ function App() {
         <Route path="/categorias" element={<ListaCategoria />} />
         <Route path="/cadastrarcategoria" element={<FormCategoria />} />
         <Route path="/editarcategoria/:id" element={<FormCategoria />} />
+        <Route path="/deletarcategoria/:id" element={<DeletarCategoria />} />
       </Routes>
     </div>
     <Footer/>

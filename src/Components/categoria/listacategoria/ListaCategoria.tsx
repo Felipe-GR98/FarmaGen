@@ -7,10 +7,6 @@ function ListaCategoria(){
 
   const [categoria,setCategoria] = useState<Categoria[]>([])
 
-  useEffect(() =>{
-    buscarCategorias()
-  }, [categoria.length])
-
   async function buscarCategorias(){
     try{
       await buscar('/categorias',setCategoria)
@@ -21,6 +17,10 @@ function ListaCategoria(){
       alert('Categoria não encontrada')
     }
   }
+
+   useEffect(() =>{
+    buscarCategorias()
+  }, [categoria.length])
   return(
     <>
     <div className="flex justify-center w-full my-4">
