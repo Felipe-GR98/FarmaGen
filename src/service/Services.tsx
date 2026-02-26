@@ -2,6 +2,11 @@ import axios from "axios";
 
 const api = axios.create({baseURL:'https://farmacia-js12.onrender.com/'})
 
+// eslint-disable-next-line @typescript-eslint/no-unsafe-function-type
+export const buscar = async (url: string, setDados: Function,) => {
+    const resposta = await api.get(url)
+    setDados(resposta.data)
+}
 
 // eslint-disable-next-line @typescript-eslint/no-unsafe-function-type
 export const cadastrar = async (url: string, dados: object, setDados: Function) => {
